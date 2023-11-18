@@ -1,0 +1,7 @@
+{
+  "name": "WebFront",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
