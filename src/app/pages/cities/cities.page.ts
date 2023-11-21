@@ -37,5 +37,4 @@ export class CitiesPage implements OnInit {
     const item = this.cities.findIndex(city => city.id === id)
     this.cities.splice(item, 1)
   }
-
 }

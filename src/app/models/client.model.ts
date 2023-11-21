@@ -1,9 +1,9 @@
-import { City } from "./city.model";
-
 export interface Client {
   id: string;
   name: string;
   sexo: string;
+  birthday: Date;
   idade: number;
-  city: City;
+  city: string;
+  state: string;
 }

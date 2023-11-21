@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>clients</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-searchbar [disabled]="loading" debounce="2000" (ionInput)="onChange($event)" placeholder="Nome do cliente"></ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor="let client of clients ">
+      <ion-label>
+        <h3>{{ client.name }}</h3>
+        <p>{{ client.sexo }}</p>
+        <p>{{ client.birthday | date: 'dd/MM/yyyy' }}</p>
+        <p>{{ client.idade}}</p>
+        <p>{{ client.city }}</p>
+        <p>{{ client.state }}</p>
+      </ion-label>
+      <ion-button slot="end" color="danger" (click)="deleteItem(client.id)">
+        <ion-icon name="trash"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
